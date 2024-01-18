@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu-Gi-Oh custom card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cinzel', serif;
+            font-weight: 800;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            min-width: 694px;
+            overflow-x: auto;
+            transform-origin: center;
+            transform: scale(0.67);
+        }
+
+        .yugioh-card {
+            width: 694px;
+            height: 1013px;
+            perspective: 1500px;
+            position: relative;
+            transform-origin: center;
+        }
+
+        .side {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transition: transform 3s ease;
+        }
+
+        .front {
+            background-image: url('Images/pngegg.png');
+            background-size: cover;
+            z-index: 2;
+        }
+
+        .back {
+            border-radius: 20px;
+            background-color: grey;
+            transform: rotateY(180deg);
+            text-align: center;
+            color: white;
+            font-size: 60px;
+            display: flex;
+            background-color: grey;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* 
+        .yugioh-card:hover .front {
+            transform: rotateY(0deg);
+        } */
+
+        .yugioh-card:hover .front {
+            transform: rotateY(-180deg) scale(0.67);
+        }
+
+        .yugioh-card:hover .back {
+            transform: rotateY(0deg);
+        }
+
+        .head-title {
+            height: 78px;
+            line-height: 78px;
+            text-align: center;
+            margin: 58px 58px 0px 58px;
+            font-size: 36px;
+            color: #000;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .inner-image {
+            width: 492px;
+            height: 542px;
+            margin: 100px 100px 0px 100px;
+            background-color: #16928a;
+            background-image: url('Images/dog.jpg');
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .description-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 63px;
+            margin-left: 69px;
+            margin-right: 260px;
+            font-size: 24px;
+            color: #000;
+            height: 110px;
+            padding: 0 10px;
+            overflow: hidden;
+        }
+
+        .description-text {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.4;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="yugioh-card">
+        <div class="side front">
+            <div class="head-title">Eres un gran amigo </div>
+            <div class="inner-image"></div>
+            <div class="description-container">
+                <div class="description-text">
+                    Usa esta carta para tu amigo con más side de verga :D
+                </div>
+            </div>
+        </div>
+        <div class="side back">
+            Un abrazo amigo <br>side DE VERGA :D
+        </div>
+    </div>
+
+</body>
+
+</html>
